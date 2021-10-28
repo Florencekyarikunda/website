@@ -1,3 +1,4 @@
+import django_heroku
 """
 Django settings for news project.
 
@@ -182,4 +183,4 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# django_heroku.settings(locals())
+django_heroku.settings(locals())
