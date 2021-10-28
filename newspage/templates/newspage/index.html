@@ -52,7 +52,9 @@ padding: 20px;
   transform: none;
   text-decoration: none;
   padding-top: 0%;
+  list-style-type: none;
 }
+
 .center{
   display: block;
   margin-left: auto;
@@ -76,14 +78,13 @@ padding: 20px;
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li><a href="/">Go Back</a></li>
-          <li><a href="{% url 'index' %}">Featured News</a></li>
+          <li><a href="{% url 'index' %}" style="float: right;">Featured News</a></li>
         </ul>
       </div>  
       <div class="navbar-collapse collapse w-100 order-3 dual-collapse2", style="float: right;">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="/" >Live Stream</a>
-                <a class="nav-link" href="/">Contact Us</a>
             </li>
         </ul>
     </div>

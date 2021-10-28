@@ -2,9 +2,9 @@ from django.shortcuts import render
 
 from .mixins import YouTube
 
-'''
-Basic view for displaying videos 
-'''
+# '''
+# Basic view for displaying videos 
+# '''
 def videos(request):
 
 	videos = YouTube().get_data()
@@ -13,9 +13,9 @@ def videos(request):
 	return render(request, 'livestream/videos.html', context)
 
 
-'''
-Basic view for showing a video in an iframe 
-'''
+# '''
+# Basic view for showing a video in an iframe 
+# '''
 def play_video(request):
 
 	vid_id = request.GET.get("vid_id")

@@ -48,8 +48,9 @@ INSTALLED_APPS = [
     'whitenoise',
     'featurednews',
     'rest_framework',
-    'livestream',
+    # 'livestream',
     'contact',
+  
    
       
 ]

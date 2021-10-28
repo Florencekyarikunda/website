@@ -2,6 +2,28 @@
 {% block content%}
 <div class="container">
   <h3>News Headlines</h3>
+  <div class="mynavs">  
+    <div class="navbar navbar-inverse" role="navigation">
+      <img src="{{ 'static/images/logo.jpg'}}", class="center" alt="">
+  
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">News</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Go Back</a></li>
+            <li><a href="{% url 'index' %}" style="float: right;">Featured News</a></li>
+          </ul>
+        </div>  
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2", style="float: right;">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="/" >Live Stream</a>
+              </li>
+          </ul>
+      </div>
+    </div>
+  </div
   {% for article_row in articles %}
   <div class="row">
     {% for article in article_row %}
