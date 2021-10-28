@@ -49,10 +49,7 @@ INSTALLED_APPS = [
     'featurednews',
     'rest_framework',
     # 'livestream',
-    'contact',
-  
-   
-      
+       
 ]
 
 

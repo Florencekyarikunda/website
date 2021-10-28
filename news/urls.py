@@ -19,7 +19,6 @@ from django.conf import settings
 from django.urls.conf import include
 from django.contrib.staticfiles.urls import static
 from django.conf.urls.static import static
-from contact import views as contact_views
 
 # from news.featurednews.apps import FeaturednewsConfig  
 # from news import featurednews
@@ -30,7 +29,6 @@ urlpatterns = [
     path('', include('newspage.urls')),
     # path('index', include( 'index.urls')),
     path('livestream', include('livestream.urls', namespace="livestream")),
-    path('contact/', contact_views.contact_view, name='contact'),
     path('featurednews', include('featurednews.urls'))
 
 ]
