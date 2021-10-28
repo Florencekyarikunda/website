@@ -1,0 +1,23 @@
+{% load 'macros' %}
+{% macro displaySourceList(source_list) %}
+{% for source_row in source_list %}
+<div class="row">
+  {% for sources in source_row %}
+  <div class="col-md-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <a href="/sources/{{sources.id}}">
+          {{ sources.name}}
+      </div>
+      <div class="panel-body">
+        <p>
+          {{ sources.description }
+        </p>
+        <a href="/sources/{{sources.id}}" class="btn btn-info btn-sm">View Please <a href="sources/australian-financial-review"></a></a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}
+{% endmacro %}

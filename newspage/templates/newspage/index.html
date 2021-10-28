@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>News Desk</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Bootstrap -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/index.css">
+<style>
+  
+  .navbars{
+    display: flex;
+    float: right;
+    /* font-size: 20px; */
+   }
+/* .row{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left:15px;
+} */
+.col-md-4{
+display: flex;  
+width: 350px;
+height: 300px;
+padding: 20px;
+}
+
+.mynavs{
+  font-size: 20px;
+ 
+  
+}
+.container{
+  /* align-items: center; */
+  /* justify-content: center; */
+  text-align: center;
+}
+ /* .navbar-header{
+   padding-top: 50px; 
+}
+ .navbar-collapse{
+   padding-top: 50px; 
+}   */
+
+.nav-link{
+  list-style: none;
+  transform: none;
+  text-decoration: none;
+  padding-top: 0%;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+  
+<div class="mynavs">  
+  <div class="navbar navbar-inverse" role="navigation">
+    <img src="{{ 'static/images/logo.jpg'}}", class="center" alt="">
+
+      <div class="navbar-header">
+          <a class="navbar-brand" href="/">News</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">Go Back</a></li>
+          <li><a href="{% url 'index' %}">Featured News</a></li>
+        </ul>
+      </div>  
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2", style="float: right;">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/" >Live Stream</a>
+                <a class="nav-link" href="/">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+  </div>
+</div> 
+<!-- </header> -->
+<div class="container">
+  <!-- Business News  -->
+  <h3 class="text text-center">Business News Sources</h3>
+  <hr>
+<div class="row">
+{% for source in sources %}
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <a href="/sources/australian-financial-review">
+          {{ source.name }}
+          <!-- Australian Financial Review -->
+        </a>
+      </div>
+      <div class="panel-body">
+        <p>
+         {{ source.description }}
+        </p>
+        <a href="{{ source.url }}" class="btn btn-info btn-sm">View Please</a>
+      </div>
+    </div>
+  </div>
+{%endfor%}
+</div>
+
+  <!-- Technology News  -->
+  <h3 class="text text-center">Technology News Sources</h3>
+  <hr>
+<div class="row">
+{% for source in technology_sources %}
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <a href="/sources/ars-technica">
+       {{ source.name }}
+        </a>
+      </div>
+      <div class="panel-body">
+        <p>
+        {{ source.description }}
+        </p>
+        <a href="{{ source.url }}" class="btn btn-info btn-sm">View Please</a>
+      </div>
+    </div>
+  </div>
+{%endfor%}     
+</div>
+
+  <!-- Entertainment News  -->
+  <h3 class="text text-center">Entertainment News Sources</h3>
+  <hr>
+<div class="row">
+{% for source in entertainment_sources %}
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <a href="/sources/buzzfeed">
+          {{ source.name }}
+        </a>
+      </div>
+      <div class="panel-body">
+        <p>
+          {{ source.description }}
+        </p>
+        <a href="{{ source.url }}" class="btn btn-info btn-sm">View Please</a>
+      </div>
+    </div>
+  </div>
+{%endfor%}
+</div>
+
+<!-- Sports News Sources  -->
+
+<h3 class="text text-center">Sports News Sources</h3>
+  <hr>
+<div class="row">
+{% for source in sports_sources %}
+<div class="col-md-4">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="/sources/sports_sources">
+        {{ source.name }}
+      </a>
+    </div>
+    <div class="panel-body">
+      <p>
+        {{ source.description }}
+      </p>
+      <a href="{{ source.url }}" class="btn btn-info btn-sm">View Please</a>
+    </div>
+  </div>
+</div>
+{%endfor%}
+</div>
+</div>
+</body>
+</html>
