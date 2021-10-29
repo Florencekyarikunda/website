@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-9%^$8z&q!6ukt6wi98)18onz#5=_u7fj@s)-y212sr043es+qm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['obscure-oasis-55198.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -99,7 +99,7 @@ DATABASES = {
 
 
 PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
-STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT  =   os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra lookup directories for collectstatic to find static files
@@ -147,22 +147,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 ACCOUNT_EMAIL_REQUIRED=True
-STATIC_URL = '/static/'
 MEDIA_URL='/images/'
 
 STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)
 
 # PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
-STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
-STATIC_URL = '/static/'
-
-
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
-)
-
-CONTACT_EMAIL = 'contact@example.com'
-ADMIN_EMAILS = ['admin@example.com', ]
+# STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
 
 
 # Twilio SendGrid
