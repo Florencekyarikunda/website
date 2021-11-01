@@ -1,4 +1,6 @@
 import django_heroku
+import os
+
 """
 Django settings for news project.
 
@@ -28,9 +30,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9%^$8z&q!6ukt6wi98)18onz#5=_u7fj@s)-y212sr043es+qm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['obscure-oasis-55198.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['macabre-crypt-73201.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -92,10 +94,11 @@ WSGI_APPLICATION = 'news.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))

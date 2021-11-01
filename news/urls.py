@@ -28,7 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('newspage.urls')),
     # path('index', include( 'index.urls')),
-    path('livestream', include('livestream.urls', namespace="livestream")),
+    # path('livestream', include('livestream.urls', namespace="livestream")),
     path('featurednews', include('featurednews.urls'))
 
 ]

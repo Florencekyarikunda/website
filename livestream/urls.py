@@ -1,12 +1,12 @@
-from django.urls import path
-from . import views
+# from django.urls import path
+# from . import views
 
 
-app_name = "livestream"
+# app_name = "livestream"
 
-urlpatterns = [
+# urlpatterns = [
 	
-	path('', views.videos, name="videos"),
-	path('play-video', views.play_video, name="play-video"),
+# 	path('', views.videos, name="videos"),
+# 	path('play-video', views.play_video, name="play-video"),
 
-	]
+# 	]
